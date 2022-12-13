@@ -85,6 +85,7 @@ Move to the project directory using:\
 
 Execute the following:\
 `python3 main.py [OPTIONS] [ADDRESS_LINE]`
+
 ---
 # OPTIONS
     -s   Address line to be parsed
