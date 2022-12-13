@@ -59,6 +59,19 @@ def construct_json(street: str, house_number: str) -> str:
 
 
 def extract_parts(address_str) -> typing.Tuple[str, str]:
+    """
+    3 different approaches to extract the corresponding address components.\
+    They are evaluated one at a time. When the parser matches with one of the cases for the input address line,
+    it's not necessary to continue with others.
+
+    :param: address_str -> The given address string
+
+    1. Regex for No/nr notion
+    2. Checking for the trailing house number
+    3. Checking for the leading house number
+    4. Checking for the house number in between the characters
+
+    """
     splitted_address = splitter(address_str)
 
     # Cases with No/Nr/№ are handled differently

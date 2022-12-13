@@ -79,55 +79,37 @@ It will match addresses with the following format:
 
 # RUN
 Clone the project executing the following command in a terminal:\
-`git clone https://github.com/reynierg/addressline.git`
+`git clone https://github.com/plahoi/address_parser.git`
 
 Move to the project directory using:\
-`cd addressline`
+`cd address_parser`
 
 Execute the following:\
-`python3 bin/addressline.py [OPTIONS] ADDRESS_LINE`
+`python3 main.py [OPTIONS] [ADDRESS_LINE]`
 
 # OPTIONS
-    -h, --help                  Print this help text and exit
-    -v, --verbose               Display verbose information about the proram execution
+    -s   Address line to be parsed
 
 # EXAMPLES
-I- Parse the address "Königsbrücker Str. 21 - 29":\
-`python3 bin/addressline.py 'Königsbrücker Str. 21 - 29'`
+I- Parse the address "Rue des Francs, 70":\
+`python3 main.py -s 'Rue des Francs, 70'`
   
 Output:
 ```
-A regular expression matched the specified address line
-Output: {'street': 'Königsbrücker Str.', 'housenumber': '21 - 29'}
+{'street': 'Rue des Francs', 'housenumber': '70'}
 ```
 
-II- Parse the address "4, rue de la revolution":\
-`python3 bin/addressline.py '4, rue de la revolution'`
+II- Parse the address "Calle 39 No 1540B":\
+`python3 main.py -s 'Calle 39 No 1540B'`
   
 Output:
 ```
-A regular expression matched the specified address line
-Output: {'street': 'rue de la revolution', 'housenumber': '4'}
+{'street': 'Calle 39', 'housenumber': 'No 1540B'}
 ```
 
-# RUN-TESTS
+# TESTS
 
-For run the tests, first will be needed to install the development requirements:
-## Create and activate a virtual environment
-Being in the project directory, execute the following commands:
+To run tests, in the project directory run the following command:
 ```
-python3 -m venv venv
-. venv/bin/activate
+python3 -m unittest test.test_parser
 ```
-
-## Install the development dependencies
-`pip install -r dev-requirements.txt`
-
-## Run the tests
-Once installed the dependencies, is only necessary to execute "tox", and it will take care of run 
-"flake8", "pylint", "mypy" and the tests using "pytest":\
-`tox`
-
-If the tests run successfully, in a directory named "htmlcov", will be created html files with the test coverage report 
-and in the terminal will appear something like the following:
-![alt text](https://github.com/reynierg/addressline/blob/main/images/TestExecutionResult.jpg "Test Coverage Results")
