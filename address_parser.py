@@ -10,7 +10,7 @@ Assumptions:
  - Street numbers can't be negative
  - We can't rely on commas to separate street and number 
     because there are a lot street names with commas in the middle
- - There are no addreses with range of house numbers like "31 - 32"
+ - There are no addresses with range of house numbers like "31 - 32"
 """
 
 
