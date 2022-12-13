@@ -38,6 +38,8 @@ There have been used 3 different approaches to try to extract the corresponding 
 They are evaluated one at a time. When the parser matches with one of the cases for the input address line, it's not necessary 
 to continue with others.
 
+When the parser doesn't meet any of the 3 given criteria, then the algorithm moves from the end of the address string to the beginning until it meets the number. Therefore everything to the right of the number, including the number itself is supposed to be a house number.
+
 ## Case I: Regex for No/nr notion
 
 `(?P<street>.+\d+)\s(?P<house_number>(?:No|Nr|no|nr)\.?\s?\d+\s?[a-zA-Z]?)`
