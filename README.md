@@ -2,11 +2,11 @@ Address line parser
 
 - [DESCRIPTION](#description)
 - [SOLUTION](#solution)
-- [DEV-DEPENDENCIES](#dev-dependencies)  
+- [DEPENDENCIES](#dependencies)  
 - [RUN](#run)
 - [OPTIONS](#options)
 - [EXAMPLES](#examples)
-- [RUN-TESTS](#run-tests)
+- [TESTS](#tests)
 
 # DESCRIPTION
 
