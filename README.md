@@ -2,7 +2,6 @@ Address line parser
 
 - [DESCRIPTION](#description)
 - [SOLUTION](#solution)
-- [DEPENDENCIES](#dependencies)  
 - [RUN](#run)
 - [OPTIONS](#options)
 - [EXAMPLES](#examples)
