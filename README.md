@@ -8,7 +8,6 @@ Address line parser
 - [TESTS](#tests)
 
 # DESCRIPTION
-
 An address provider returns addresses only with concatenated street names and numbers. Our own system on the other hand has separate fields for street name and street number.
 
 **Input:** string of address
@@ -29,9 +28,8 @@ An address provider returns addresses only with concatenated street names and nu
    1. `"200 Broadway Av"` -> `{"street": "Broadway Av", "housenumber": "200"}`
    1. `"Calle Aduana, 29"` -> `{"street": "Calle Aduana", "housenumber": "29"}`
    1. `"Calle 39 No 1540"` -> `{"street": "Calle 39", "housenumber": "No 1540"}`
-
+---
 # SOLUTION
-
 It requires a Python interpreter and has been tested with version 3.8.1 and macOS. But it should be platform agnostic and run on Linux and Windows.
 
 The application extracts the street name and house number using regular expressions and simple logic.
@@ -75,7 +73,7 @@ It will match addresses with the following format:
 
 It will match addresses with the following format:
 - Auf der Vogelwiese 23 b
-
+---
 # RUN
 Clone the project executing the following command in a terminal:\
 `git clone https://github.com/plahoi/address_parser.git`
@@ -85,12 +83,12 @@ Move to the project directory using:\
 
 Execute the following:\
 `python3 main.py [OPTIONS] [ADDRESS_LINE]`
-
+---
 # OPTIONS
     -s   Address line to be parsed
-
+---
 # EXAMPLES
-I- Parse the address "Rue des Francs, 70":\
+Parse the address "Rue des Francs, 70":\
 `python3 main.py -s 'Rue des Francs, 70'`
   
 Output:
@@ -98,16 +96,15 @@ Output:
 {'street': 'Rue des Francs', 'housenumber': '70'}
 ```
 
-II- Parse the address "Calle 39 No 1540B":\
+Parse the address "Calle 39 No 1540B":\
 `python3 main.py -s 'Calle 39 No 1540B'`
   
 Output:
 ```
 {'street': 'Calle 39', 'housenumber': 'No 1540B'}
 ```
-
+---
 # TESTS
-
 To run tests, in the project directory run the following command:
 ```
 python3 -m unittest test.test_parser
